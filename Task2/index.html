@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>GitHub User Directory</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <script type="text/javascript" src="git.js"></script>
 </head>
 <body>
-<div class="container">
-    <br><br>
-    <h1 style="text-align: center">
-        GitHub User Search
-    </h1>
-    <form id="gitForm" autocomplete="off">
-        <div class="form-group">
-            <input type="text" class="form-control" id="search">
+<html>
+<head>
+    <title>Github User Finder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <h1>Github User Search Directory!</h1>
+</header>
+<!--Form Section-->
+<div id="container">
+    <div class="form-group">
+        <input type="text" id="username" class="form-control" style="
+        font-size:24px;">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Search</button>
+    </div>
+
+    <!--User Info Display-->
+    <div id="user_info">
+        <h1></h1>
+        <div class="row">
+            <div class="col-md-6 userImage">
+                <img src="">
+            </div>
+            <div class="col-md-6 information">
+                <br/><br/>
+                <h3>Name: <span id="GitHubname"></span></h3><br/>
+                <h3>ID: <span id="loginId"></span></h3><br/>
+                <h3>GitHub URL:
+                    <a href="#" target="_blank" id="gitURL">Click here to access the Github profile!</a>
+                </h3><br/>
+            </div>
         </div>
-        <div class="form-group">
-            <button class="btn btn-danger btn-block">
-                Search User
-            </button>
-        </div>
-    </form>
+    </div>
 </div>
 
-    <div id="userData">
-    </div><div id="userData">
-</div>
-
-<script type="text/javascript" src="git.js"></script>
 </body>
 </html>
+
